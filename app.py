@@ -104,21 +104,29 @@ html, body, [class*="css"] {
 }
 
 /* ── Streamlit input overrides ── */
-.stTextInput > div > div > input {
-    background: rgba(255,255,255,0.05) !important;
+[data-testid="stTextInput"] div[data-baseweb="input"] {
+    background: #18181b !important;
     border: 1px solid rgba(255,140,50,0.25) !important;
     border-radius: 10px !important;
+}
+[data-testid="stTextInput"] input {
+    background: #18181b !important;
     color: #f0ebe0 !important;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 1rem !important;
     padding: 0.75rem 1rem !important;
     transition: border-color 0.2s, box-shadow 0.2s !important;
+    -webkit-text-fill-color: #f0ebe0 !important;
 }
-.stTextInput > div > div > input:focus {
+[data-testid="stTextInput"] input::placeholder {
+    color: #706860 !important;
+    opacity: 1 !important;
+}
+[data-testid="stTextInput"] div[data-baseweb="input"]:focus-within {
     border-color: #ff8c32 !important;
     box-shadow: 0 0 0 3px rgba(255,140,50,0.12) !important;
 }
-.stTextInput > label {
+[data-testid="stTextInput"] label {
     font-family: 'DM Mono', monospace !important;
     font-size: 0.72rem !important;
     letter-spacing: 0.15em !important;

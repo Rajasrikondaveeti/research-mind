@@ -1,7 +1,7 @@
 ---
 title: ResearchMind
 emoji: 🔬
-colorFrom: orange
+colorFrom: yellow
 colorTo: red
 sdk: streamlit
 sdk_version: "1.38.0"

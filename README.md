@@ -175,6 +175,14 @@ python pipeline.py
 
 Prompts for a topic in the terminal and prints all outputs to the console — useful for quick testing and development.
 
+### Hugging Face Spaces (Cloud)
+
+You can easily deploy this app to Hugging Face Spaces for free:
+1. Create a new **Streamlit** Space on [Hugging Face](https://huggingface.co/spaces).
+2. Upload all python files, `requirements.txt`, and the `.streamlit/config.toml` file.
+3. Add your `OPENAI_API_KEY` and `TAVILY_API_KEY` in the Space Settings under **Variables and secrets**.
+4. The app will build and run automatically!
+
 ---
 
 ## 📁 Project Structure
@@ -191,12 +199,12 @@ Multi-agent-research-system/
 └── README.md             # This file
 ```
 
-| File | Lines | Role |
-|------|:-----:|------|
-| `tools.py` | 38 | Defines `web_search` (Tavily API) and `scrape_url` (BeautifulSoup) tools |
-| `agents.py` | 79 | Builds Search Agent, Reader Agent, Writer Chain, and Critic Chain |
-| `pipeline.py` | 76 | Orchestrates all 4 steps sequentially with a shared state dictionary |
-| `app.py` | 508 | Full Streamlit app with 290 lines of custom CSS, session state, and result rendering |
+| File | Role |
+|------|------|
+| `tools.py` | Defines `web_search` (Tavily API) and `scrape_url` (BeautifulSoup) tools |
+| `agents.py` | Builds Search Agent, Reader Agent, Writer Chain, and Critic Chain |
+| `pipeline.py` | Orchestrates all 4 steps sequentially with a shared state dictionary |
+| `app.py` | Full Streamlit app with custom dark-mode CSS, session state, and result rendering |
 
 ---
 
